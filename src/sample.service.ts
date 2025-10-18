@@ -24,7 +24,7 @@ class SampleService {
   }
 
   async getPlayableUrl(videoId: string): Promise<string> {
-    return 'https://raw.githubusercontent.com/monokaijs/minip-ytb-source/refs/heads/main/music/california-day.mp3';
+    return 'https://github.com/monokaijs/minip-sample-source/raw/refs/heads/main/music/california-day.mp3';
   }
 }
 

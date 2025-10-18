@@ -212,7 +212,7 @@ var SampleService = /*#__PURE__*/function () {
         return _regenerator().w(function (_context3) {
           while (1) switch (_context3.n) {
             case 0:
-              return _context3.a(2, 'https://raw.githubusercontent.com/monokaijs/minip-ytb-source/refs/heads/main/music/california-day.mp3');
+              return _context3.a(2, 'https://github.com/monokaijs/minip-sample-source/raw/refs/heads/main/music/california-day.mp3');
           }
         }, _callee3);
       }));
@@ -226,7 +226,7 @@ var SampleSource = /*#__PURE__*/function () {
     _classCallCheck(this, SampleSource);
     this.id = 'sample';
     this.name = 'Sample Media Source';
-    this.version = '1.0.0';
+    this.version = '1.0.1';
   }
   return _createClass(SampleSource, [{
     key: "initialize",

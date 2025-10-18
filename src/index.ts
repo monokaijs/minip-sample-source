@@ -4,7 +4,7 @@ import {sampleService} from "./sample.service";
 class SampleSource implements MusicSource {
   id: string = 'sample';
   name: string = 'Sample Media Source';
-  version: string = '1.0.0';
+  version: string = '1.0.1';
 
   async initialize() {
     await sampleService.start();

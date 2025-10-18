@@ -1,7 +1,7 @@
 {
   "id": "sample",
   "name": "Sample Source",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sample referencing media source",
   "author": "MiniP",
   "bundleUrl": "https://raw.githubusercontent.com/monokaijs/minip-sample-source/refs/heads/main/dist/index.cjs",
