@@ -1,7 +1,3 @@
-import * as node_modules_youtubei_js_dist_src_parser_ytmusic from 'node_modules/youtubei.js/dist/src/parser/ytmusic';
-import * as node_modules_youtubei_js_dist_src_parser_helpers from 'node_modules/youtubei.js/dist/src/parser/helpers';
-import * as node_modules_youtubei_js_dist_src_parser_nodes from 'node_modules/youtubei.js/dist/src/parser/nodes';
-
 interface Track {
     id: string;
     title: string;
@@ -42,20 +38,20 @@ interface MusicSource {
     getSearchSuggestions?(query: string): Promise<string[]>;
 }
 
-declare class YouTubeSource implements MusicSource {
+declare class SampleSource implements MusicSource {
     id: string;
     name: string;
     version: string;
     initialize(): Promise<void>;
     search(query: string, pageToken: string | undefined): Promise<SearchResponse>;
     getPlayableUrl(trackId: string): Promise<string>;
-    getSuggestions(trackId: string, size?: number): Promise<Track[]>;
-    getPlaylists(): Promise<node_modules_youtubei_js_dist_src_parser_helpers.ObservedArray<node_modules_youtubei_js_dist_src_parser_nodes.GridPlaylist | node_modules_youtubei_js_dist_src_parser_nodes.LockupView | node_modules_youtubei_js_dist_src_parser_nodes.Playlist>>;
-    getPlaylist(playlistId: string): Promise<node_modules_youtubei_js_dist_src_parser_ytmusic.Playlist>;
-    getSearchSuggestions(query: string): Promise<string[]>;
+    getSuggestions(trackId: string, size?: number): Promise<never[]>;
+    getPlaylists(): Promise<never[]>;
+    getPlaylist(playlistId: string): Promise<void>;
+    getSearchSuggestions(query: string): Promise<never[]>;
 }
-declare const defaultSource: YouTubeSource;
+declare const defaultSource: SampleSource;
 
-declare const createSource: () => YouTubeSource;
+declare const createSource: () => SampleSource;
 
 export { createSource, defaultSource as default };
