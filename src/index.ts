@@ -1,41 +1,40 @@
 import {MusicSource} from "./types/source";
-import {youtubeService} from "./youtube.service";
+import {sampleService} from "./sample.service";
 
-class YouTubeSource implements MusicSource {
-  id: string = 'minip-ytb-music';
-  name: string = 'YouTube Music';
+class SampleSource implements MusicSource {
+  id: string = 'sample';
+  name: string = 'Sample Media Source';
   version: string = '1.0.0';
 
   async initialize() {
-    await youtubeService.start();
+    await sampleService.start();
   }
 
   async search(query: string, pageToken: string | undefined) {
-    return youtubeService.searchMusic(query, pageToken);
+    return sampleService.searchMusic();
   }
 
   async getPlayableUrl(trackId: string) {
-    return youtubeService.getPlayableUrl(trackId);
+    return sampleService.getPlayableUrl(trackId);
   }
 
   async getSuggestions(trackId: string, size = 10) {
-    return youtubeService.getYouTubeSuggestions(trackId, size);
+    return [];
   }
 
   async getPlaylists() {
-    return youtubeService.getPlaylists();
+    return []
   }
 
   async getPlaylist(playlistId: string) {
-    return youtubeService.getPlaylist(playlistId);
   }
 
   async getSearchSuggestions(query: string) {
-    return youtubeService.getSearchSuggestions(query);
+    return [];
   }
 }
 
-const defaultSource = new YouTubeSource();
+const defaultSource = new SampleSource();
 export default defaultSource;
-export const createSource = () => new YouTubeSource();
+export const createSource = () => new SampleSource();
 

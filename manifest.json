@@ -1,12 +1,16 @@
 {
-  "id": "minip-ytb-music",
-  "name": "YouTube Music",
+  "id": "sample",
+  "name": "Sample Source",
   "version": "1.0.0",
-  "description": "Stream music from YouTube Music with high-quality audio",
+  "description": "Sample referencing media source",
   "author": "MiniP",
-  "bundleUrl": "https://raw.githubusercontent.com/monokaijs/minip-ytb-music-source/refs/heads/main/dist/index.cjs",
-  "capabilities": ["search", "stream", "playlists", "suggestions", "top-tracks"],
-  "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
+  "bundleUrl": "https://raw.githubusercontent.com/monokaijs/minip-sample-source/refs/heads/main/dist/index.cjs",
+  "capabilities": [
+    "search",
+    "stream",
+    "playlists"
+  ],
+  "icon": "https://raw.githubusercontent.com/monokaijs/minip-sample-source/icon.jpg",
   "homepage": "https://www.youtube.com",
   "minAppVersion": "1.0.0"
 }
